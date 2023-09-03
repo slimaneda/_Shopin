@@ -16,7 +16,8 @@ Public Class Main
                 ComboBox1.Items.Add(item)
             Next
         Else
-            MessageBox.Show("The items file does not exist.")
+            MessageBox.Show("The items file does not exist.
+            You have the problems of connecting to databass. You may also consider the application without data base")
         End If
     End Sub
     Private Sub ShowDatagridview()
@@ -31,16 +32,20 @@ Public Class Main
         dt.Columns.Add("Price In")
         dt.Columns.Add("Quantity Out ")
         dt.Columns.Add("Price Out")
+        Try
+            Using reader As New StreamReader("db/Produit.txt")
+                Do While reader.Peek() <> -1
+                    Dim line As String = reader.ReadLine()
+                    Dim parts As String() = line.Split("|"c)
+                    If parts.Length = 8 Then
+                        dt.Rows.Add(parts)
+                    End If
+                Loop
+            End Using
 
-        Using reader As New StreamReader("db/Produit.txt")
-            Do While reader.Peek() <> -1
-                Dim line As String = reader.ReadLine()
-                Dim parts As String() = line.Split("|"c)
-                If parts.Length = 8 Then
-                    dt.Rows.Add(parts)
-                End If
-            Loop
-        End Using
+        Catch ex As Exception
+
+        End Try
 
         DataGridView1.DataSource = dt
 
