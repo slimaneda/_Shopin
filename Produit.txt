@@ -1,0 +1,9 @@
+silvia|1|marble|12/12/2022|05|350|04|400
+rouge tinghir|2|marble|12/08/2023|03|350|20|430
+gris violet|3|marble|12/12/2022|40|330|20|360
+bjjaad|4|marble|12/12/2001|63|360|10|366
+rouge palmoral|5|granite|12/12/2021|01|750|01|855
+noire absolu|6|granite|12/12/2022|10|1000|02|1100
+granit mama|7|granit|12/08/2023|10|1066|02|1075
+rosavilt|8|granit|12/12/2001|20|170|20|1080
+grand tache|9|granit|12/12/2001|10|660|05|755
